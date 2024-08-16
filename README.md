@@ -57,7 +57,7 @@ You can execute a .lambda file containing a script in the custom language define
 **Example Script:**
  ```lambda
   Defun {'name': 'factorial', 'arguments': (n)} (n == 0) or (n * factorial(n - 1))
-factorial(5)
+  factorial(5)
 ```
 **Expected output:**
 ```console
