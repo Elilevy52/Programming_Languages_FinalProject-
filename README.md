@@ -2,27 +2,21 @@
 # Overview
 This project is a functional programming interpreter developed as part of a final project for the Programming Language course under Dr. Sharon Yalov-Handzel. The interpreter is designed to handle a simple functional programming language that supports function definitions, lambda expressions, recursion, and various operations, while enforcing immutability and avoiding variable assignments.
 # Features
-* # Data Types:
+* # Data Types
   * INTEGER: Supports whole numbers(e.g., -3, 0, 42).
   * BOOLEAN: Supports 'True' and 'False'.
-* # Operations:
+* # Operations
    * Arithmetic Operations: Addition ('+'), Subtraction ('-'), Multiplication ('*'), Division 
 ('/'), and Modulo ('%').
    * Boolean Operations: AND ('&&'), OR ('||'), NOT ('!').
    * Comparison Operations: Equal to ('=='), Not equal to ('!='), Greater than ('>'), Less than ('<'), Greater than or equal to ('>='), Less than or equal to ('<=').
-* # Functions:
+* # Functions
   * Support for named function definitions and anonymous functions (lambda expressions).
   * Function application, including support for higher-order functions.
   * Recursive function calls, including support for replacing traditional while loops.
-* # Immutability:
-  * Enforces immutability for all values.
-  * No variable assignments or mutable state.
-* # Error Handling:
-  * Comprehensive error checking and reporting with meaningful error messages for syntax, type, and runtime errors.
-* # REPL(Read-Eval-Print Loop):
-  *  Interactive use of the language with immediate feedback on executed commands.
-* # Documentation:
-  * Detailed documentation of the language's BNF (Backus–Naur Form) grammar.
-  * Clear explanations of language syntax and features.
-* # Testing:
-  * A comprehensive test suite covering all language features, including edge cases and error conditions.
+* # Immutability
+  * No variable assignments or state changes
+
+# Acknowledgements
+ * Dr. Sharon Yalov-Handzel for guidance and support throughout the course and this project.
+ * Eli Levy - 206946790 and Nimrod Bar - 203531801.
