@@ -1,2 +1,16 @@
 Defun {'name': 'factorial', 'arguments': (n)} (n == 0) or (n * factorial(n - 1))
 factorial(5)
+
+Defun {'name': 'gcd', 'arguments': (a, b)}
+    (b == 0) or (
+        (a > b) and gcd(b, a % b)
+    ) or (
+        gcd(b, a)
+    )
+
+Defun {'name': 'find_gcd', 'arguments': (x, y)}
+    (x == y) or (
+        gcd(x, y)
+    )
+
+find_gcd(48, 18)
