@@ -21,4 +21,4 @@ This project is a functional programming interpreter developed as part of a fina
 
 # Acknowledgements
  * Dr. Sharon Yalov-Handzel for guidance and support throughout the course and this project.
- * Eli Levy - 206946790 and Nimrod Bar - 203531801.
+ * Creators: Eli Levy - 206946790 and Nimrod Bar - 203531801.
