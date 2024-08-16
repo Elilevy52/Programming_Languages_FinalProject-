@@ -5,7 +5,7 @@ This project is a functional programming interpreter developed as part of a fina
 
 # Features
 * **Data Types**
-  * **INTEGER:**  Supports whole numbers(e.g., -3, 0, 42).
+  * **INTEGER:**  Supports whole numbers (e.g., -3, 0, 42).
   * **BOOLEAN:** Supports 'True' and 'False'.
 * **Operations**
    * **Arithmetic Operations:** Addition ('+'), Subtraction ('-'), Multiplication ('*'), Division 
