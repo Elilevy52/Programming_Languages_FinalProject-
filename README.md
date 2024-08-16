@@ -15,8 +15,9 @@ This project is a functional programming interpreter developed as part of a fina
   * Support for named function definitions and anonymous functions (lambda expressions).
   * Function application, including support for higher-order functions.
   * Recursive function calls, including support for replacing traditional while loops.
-* # Immutability
-  * No variable assignments or state changes
+  
+ * # Immutability
+   * No variable assignments or state changes
 
 # Acknowledgements
  * Dr. Sharon Yalov-Handzel for guidance and support throughout the course and this project.
