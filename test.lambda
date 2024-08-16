@@ -1,0 +1,2 @@
+Defun {'name': 'factorial', 'arguments': (n)} (n == 0) or (n * factorial(n - 1))
+factorial(5)

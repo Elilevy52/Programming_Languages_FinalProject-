@@ -1,0 +1,168 @@
+
+# Custom Programming Language Documentation
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Language Syntax](#language-syntax)
+   - [Basic Constructs](#basic-constructs)
+   - [Data Types](#data-types)
+   - [Operations](#operations)
+   - [Functions](#functions)
+   - [Recursion](#recursion)
+   - [Immutability](#immutability)
+3. [Features](#features)
+   - [Interactive Mode (REPL)](#interactive-mode-repl)
+   - [Batch Mode (File Execution)](#batch-mode-file-execution)
+   - [Error Handling](#error-handling)
+   - [Testing Suite](#testing-suite)
+4. [Design Considerations](#design-considerations)
+   - [Lexer Design](#lexer-design)
+   - [Parser Design](#parser-design)
+   - [Interpreter Design](#interpreter-design)
+   - [Environment Handling](#environment-handling)
+   - [Error Reporting](#error-reporting)
+5. [Examples](#examples)
+   - [Function Definition](#function-definition)
+   - [Lambda Expressions](#lambda-expressions)
+   - [Recursive Function](#recursive-function)
+   - [Boolean and Arithmetic Operations](#boolean-and-arithmetic-operations)
+6. [Usage](#usage)
+   - [Running in REPL Mode](#running-in-repl-mode)
+   - [Executing a `.lambda` File](#executing-a-lambda-file)
+   - [Running Tests](#running-tests)
+7. [Conclusion](#conclusion)
+
+## Introduction
+
+This custom programming language is designed to support basic arithmetic, boolean operations, function definitions, lambda expressions, recursion, and immutability. It is implemented with a lexer, parser, and interpreter, along with a REPL for interactive usage. The language also provides comprehensive error handling and a robust testing suite.
+
+## Language Syntax
+
+### Basic Constructs
+- **Comments**: Lines starting with `#` are considered comments and are ignored by the lexer.
+- **Statements**: Statements can include arithmetic expressions, boolean expressions, function definitions, and function calls.
+
+### Data Types
+- **INTEGER**: Represents whole numbers, e.g., `42`, `-3`, `0`.
+- **BOOLEAN**: Represents boolean values, `True` and `False`.
+
+### Operations
+- **Arithmetic Operations**: Supported operators for `INTEGER` types:
+  - Addition (`+`)
+  - Subtraction (`-`)
+  - Multiplication (`*`)
+  - Division (`/`): Integer division
+  - Modulo (`%`)
+
+- **Boolean Operations**: Supported operators for `BOOLEAN` types:
+  - AND (`&&`)
+  - OR (`||`)
+  - NOT (`!`)
+
+- **Comparison Operations**: Supported comparison operators:
+  - Equal to (`==`)
+  - Not equal to (`!=`)
+  - Greater than (`>`)
+  - Less than (`<`)
+  - Greater than or equal to (`>=`)
+  - Less than or equal to (`<=`)
+
+### Functions
+- **Function Definitions**: Defined using the `Defun` keyword.
+  ```
+  Defun {'name': 'factorial', 'arguments': (n,)}
+  (n == 0) or (n * factorial(n - 1))
+  ```
+
+- **Lambda Expressions**: Anonymous functions can be defined using `Lambda`.
+  ```
+  (Lambda (x) x + 1)(5)
+  ```
+
+- **Function Calls**: Both named functions and lambdas can be invoked by passing arguments in parentheses.
+  ```
+  factorial(5)
+  ```
+
+### Recursion
+- **Recursive Functions**: The language supports recursive function calls, allowing functions to call themselves.
+  ```
+  Defun {'name': 'factorial', 'arguments': (n)}
+  (n == 0) or (n * factorial(n - 1))
+  ```
+
+### Immutability
+- **Immutability**: All values in the language are immutable, meaning that once a value is defined, it cannot be changed.
+
+## Features
+
+### Interactive Mode (REPL)
+The language includes a REPL (Read-Eval-Print Loop) for interactive execution. Users can enter expressions and commands line by line, and the interpreter will immediately evaluate and print the result.
+
+### Batch Mode (File Execution)
+The language supports executing commands from a file with the `.lambda` extension. The interpreter reads the file, tokenizes the content, parses it into an AST, and then evaluates the AST.
+
+### Error Handling
+The interpreter provides comprehensive error handling, including syntax errors, runtime errors (e.g., division by zero), and type errors. Errors are reported with line and column information to help users identify and correct issues.
+
+### Testing Suite
+The language includes a robust testing suite implemented using Python’s `unittest` framework. The suite tests all major features, including tokenization, parsing, and evaluation, ensuring that the language behaves as expected.
+
+## Design Considerations
+
+### Lexer Design
+The lexer converts source code into a list of tokens, handling various constructs like keywords, identifiers, literals, operators, and punctuation. It also skips whitespace and checks for invalid characters.
+
+### Parser Design
+The parser takes the list of tokens from the lexer and constructs an Abstract Syntax Tree (AST). It follows the Backus-Naur Form (BNF) of the language and includes specific methods for parsing different constructs, such as function definitions, lambda expressions, and operations.
+
+### Interpreter Design
+The interpreter evaluates the AST generated by the parser. It handles function application, arithmetic operations, boolean logic, recursion, and ensures that all values remain immutable. It also manages the environment for variable and function storage.
+
+### Environment Handling
+The environment is designed to support nested scopes, allowing for proper handling of variable and function definitions within functions or lambdas. It also supports higher-order functions.
+
+### Error Reporting
+The interpreter provides detailed error messages, including the specific line and column where the error occurred, along with the context of the code. This makes it easier for users to debug their programs.
+
+## Examples
+
+### Function Definition
+```plaintext
+Defun {'name': 'add', 'arguments': (x, y)}
+x + y
+```
+
+### Lambda Expressions
+```plaintext
+(Lambda (x) x + 1)(5)
+```
+
+### Recursive Function
+```plaintext
+Defun {'name': 'factorial', 'arguments': (n)}
+(n == 0) or (n * factorial(n - 1))
+```
+
+### Boolean and Arithmetic Operations
+```plaintext
+(3 + 4) * (2 - 1)
+(x > 0) && (y < 10)
+```
+
+## Usage
+
+### Running in REPL Mode
+To start the REPL, select the "Start REPL" option from the main menu. The REPL will allow you to enter commands line by line.
+
+### Executing a `.lambda` File
+To execute a file, select the "Execute a file" option from the main menu, and provide the path to a file with a `.lambda` extension. The interpreter will execute the file and print the results.
+
+### Running Tests
+To run the tests, select the "Run all tests" option from the main menu. This will run the comprehensive test suite and report any issues.
+
+## Conclusion
+
+This documentation provides a detailed overview of the custom programming language, including its syntax, features, and design considerations. With support for functions, recursion, immutability, and comprehensive error handling, the language is well-suited for learning and exploring fundamental programming concepts.
+
+For further information or questions, please refer to the comments within the source code or reach out for additional support.
