@@ -1,0 +1,37 @@
+# Backus-Naur Form Grammar for [Your Language Name]
+
+<program> ::= <statement>*
+
+<statement> ::= <function_definition> | <expression>
+
+<function_definition> ::= "Defun" <function_header> <expression>
+
+<function_header> ::= "{" "name" ":" <string> "," "arguments" ":" "(" <identifier_list> ")" "}"
+
+<identifier_list> ::= <identifier> ("," <identifier>)*
+
+<expression> ::= <binary_operation> | <unary_operation> | <function_call> | <lambda_expression> | <literal> | <identifier>
+
+<binary_operation> ::= <expression> <binary_operator> <expression>
+
+<unary_operation> ::= <unary_operator> <expression>
+
+<function_call> ::= <identifier> "(" <argument_list> ")"
+
+<argument_list> ::= <expression> ("," <expression>)*
+
+<lambda_expression> ::= "Lambd" "(" <identifier_list> ")" <expression>
+
+<binary_operator> ::= "+" | "-" | "*" | "/" | "%" | "==" | "!=" | "<" | "<=" | ">" | ">=" | "and" | "or"
+
+<unary_operator> ::= "not" | "+" | "-"
+
+<literal> ::= <integer> | <boolean>
+
+<integer> ::= [0-9]+
+
+<boolean> ::= "True" | "False"
+
+<identifier> ::= [a-zA-Z_][a-zA-Z0-9_]*
+
+<string> ::= "'" [^']* "'"
