@@ -161,8 +161,3 @@ To execute a file, select the "Execute a file" option from the main menu, and pr
 ### Running Tests
 To run the tests, select the "Run all tests" option from the main menu. This will run the comprehensive test suite and report any issues.
 
-## Conclusion
-
-This documentation provides a detailed overview of the custom programming language, including its syntax, features, and design considerations. With support for functions, recursion, immutability, and comprehensive error handling, the language is well-suited for learning and exploring fundamental programming concepts.
-
-For further information or questions, please refer to the comments within the source code or reach out for additional support.
