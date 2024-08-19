@@ -24,7 +24,7 @@ This project is a functional programming interpreter developed as part of a fina
 The interpreter can be run in an interactive mode, also known as REPL (Read-Eval-Print Loop), 
 where you can enter commands line-by-line and see the results immediately.
 
-#**Steps to Start REPL:**
+ **Steps to Start REPL:**
 1. **Run the `main.py` script:**
    ```bash
    python main.py
@@ -44,6 +44,7 @@ where you can enter commands line-by-line and see the results immediately.
 ```
 ### 2. File Execution Mode
 You can execute a .lambda file containing a script in the custom language defined by the interpreter.
+
 **Steps to Execute a File:**
  1. **Run the `main.py` script:**
     ```bash
